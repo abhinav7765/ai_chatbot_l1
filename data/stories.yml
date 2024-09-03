@@ -1,0 +1,171 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+  
+- story: ask_about_groundwater_security
+  steps:
+  - intent: ask_about_groundwater_security
+  - action: utter_groundwater_security
+
+- story: ask_about_groundwater_crisis
+  steps:
+  - intent: ask_about_groundwater_crisis
+  - action: utter_groundwater_crisis
+
+- story: ask_about_farmer_suicides
+  steps:
+  - intent: ask_about_farmer_suicides
+  - action: utter_farmer_suicides
+
+- story: ask_about_public_trust_doctrine
+  steps:
+  - intent: ask_about_public_trust_doctrine
+  - action: utter_public_trust_doctrine
+
+- story: ask_about_fundamental_right_to_water
+  steps:
+  - intent: ask_about_fundamental_right_to_water
+  - action: utter_fundamental_right_to_water
+
+- story: ask_about_regulation_of_groundwater
+  steps:
+  - intent: ask_about_regulation_of_groundwater
+  - action: utter_regulation_of_groundwater
+
+- story: ask_about_groundwater_laws
+  steps:
+  - intent: ask_about_groundwater_laws
+  - action: utter_groundwater_laws
+
+- story: ask_name
+  steps:
+  - intent: ask_name
+  - action: utter_say_name
+
+- story: Groundwater Monitoring Inquiry
+  steps:
+    - intent: ask_groundwater_monitoring
+    - action: action_groundwater_monitoring
+    - action: utter_groundwater_monitoring_details
+
+- story: Rainfall Pattern Inquiry
+  steps:
+    - intent: ask_rainfall_pattern
+    - action: action_rainfall_pattern
+    - action: utter_rainfall_pattern_details
+
+- story: Climatic Parameters Impact
+  steps:
+    - intent: ask_climatic_parameters
+    - action: action_climatic_parameters
+    - action: utter_climatic_parameters_details 
+
+- story: Water level data request by state, district, and year
+  steps:
+    - intent: ask_water_level_by_state_district
+    - action: utter_ask_district
+    - action: utter_ask_state
+    - action: water_level_form
+    - active_loop: water_level_form
+
+- story: Complete water level form and fetch data
+  steps:
+    - action: water_level_form
+    - active_loop: water_level_form
+    - slot_was_set:
+        - state: "latest_state"
+        - district: "latest_district"
+        - year: "latest_year"
+    - action: action_fetch_water_level_data
+    - action: utter_water_level_data_fetched
+
+- story: Provide water level data after year update
+  steps:
+    - intent: inform_year
+    - slot_was_set:
+        - year: "latest_year"
+    - action: action_fetch_water_level_data
+    - action: utter_water_level_data_fetched
+
+- story: ask_water_level_by_year
+  steps:
+  - intent: ask_water_level_by_year
+  - slot_was_set:
+        - year: "latest_year"
+  - action: action_fetch_water_level_data
+  - action: utter_water_level_data_fetched
+
+
+- story: Provide water level data after district update
+  steps:
+    - intent: inform_district
+    - slot_was_set:
+        - district: "latest_district"
+    - action: action_fetch_water_level_data
+    - action: utter_water_level_data_fetched
+
+- story: Provide water level data after state update
+  steps:
+    - intent: inform_state
+    - slot_was_set:
+        - state: "latest_state"
+    - action: action_fetch_water_level_data
+    - action: utter_water_level_data_fetched
+
+- story: ask_statewise_groundwater_levels
+  steps:
+  - intent: ask_statewise_groundwater_levels
+  - slot_was_set:
+        - state: "latest_state"
+  - action: action_fetch_water_level_data
+  - action: utter_water_level_data_fetched
+
+
+- story: ask_groundwater_level_effects
+  steps:
+  - intent: ask_groundwater_level_effects
+  - action: utter_groundwater_level_effects
+
+- story: ask_groundwater_levels
+  steps:
+  - intent: ask_groundwater_levels
+  - action: utter_groundwater_levels_details
+  - action: action_fetch_water_level_data
+
+- story: ask_historical_groundwater_levels
+  steps:
+  - intent: ask_historical_groundwater_levels
+  - action: utter_ask_year
+
+- story: ask_methods_of_measuring_groundwater_levels
+  steps:
+  - intent: ask_methods_of_measuring_groundwater_levels
+  - action: utter_methods_of_measuring_groundwater_levels
+

@@ -1,0 +1,67 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: respond to groundwater security question
+  steps:
+  - intent: ask_about_groundwater_security
+  - action: utter_groundwater_security
+
+- rule: respond to groundwater crisis question
+  steps:
+  - intent: ask_about_groundwater_crisis
+  - action: utter_groundwater_crisis
+
+- rule: respond to farmer suicides question
+  steps:
+  - intent: ask_about_farmer_suicides
+  - action: utter_farmer_suicides
+
+- rule: respond to public trust doctrine question
+  steps:
+  - intent: ask_about_public_trust_doctrine
+  - action: utter_public_trust_doctrine
+
+- rule: respond to fundamental right to water question
+  steps:
+  - intent: ask_about_fundamental_right_to_water
+  - action: utter_fundamental_right_to_water
+
+- rule: respond to regulation of groundwater questionattribute
+  steps:
+  - intent: ask_about_regulation_of_groundwater
+  - action: utter_regulation_of_groundwater
+
+- rule: Handle groundwater monitoring questions
+  steps:
+      - intent: ask_groundwater_monitoring
+      - action: action_groundwater_monitoring
+      - action: utter_groundwater_monitoring_details
+
+- rule: Handle rainfall pattern questions
+  steps:
+      - intent: ask_rainfall_pattern
+      - action: action_rainfall_pattern
+      - action: utter_rainfall_pattern_details
+
+- rule: Handle climatic parameters questions
+  steps:
+      - intent: ask_climatic_parameters
+      - action: action_climatic_parameters
+      - action: utter_climatic_parameters_details
+
+# Fallback rule
+- rule: fallback response
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default

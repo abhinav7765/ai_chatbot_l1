@@ -1,0 +1,244 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  - intent: ask_about_groundwater_laws
+    examples: |
+      - laws of water?
+      - what are groundwater laws
+      - laws of goundwater
+
+  - intent: ask_name
+    examples: |
+      - My name is [Abhinav](name)
+      - I am [Abhinav](name)
+      - Me is [Abhinav](name)
+
+  - intent: ask_about_groundwater_security
+    examples: |
+      - What is groundwater security?
+      - Can you tell me about groundwater security?
+      - How does the government ensure groundwater security?
+      - What are the rules for groundwater in rural and urban areas?
+
+  - intent: ask_about_groundwater_crisis
+    examples: |
+      - What is the groundwater crisis?
+      - Why is there a groundwater crisis?
+      - What are the reasons for the groundwater crisis?
+      - How does groundwater contamination affect us?
+
+  - intent: ask_about_farmer_suicides
+    examples: |
+      - Why are farmers committing suicide?
+      - How is groundwater linked to farmer suicides?
+      - Is there a connection between droughts and farmer suicides?
+      - What causes farmer suicides related to groundwater?
+
+  - intent: ask_about_public_trust_doctrine
+    examples: |
+      - What is the public trust doctrine?
+      - How does the public trust doctrine apply to groundwater?
+      - What did the Supreme Court say about groundwater?
+      - Is groundwater a common resource?
+
+  - intent: ask_about_fundamental_right_to_water
+    examples: |
+      - Is water a fundamental right in India?
+      - What is the right to water?
+      - What does the Supreme Court say about the right to water?
+      - How does the right to water relate to groundwater?
+
+  - intent: ask_about_regulation_of_groundwater
+    examples: |
+      - How is groundwater regulated?
+      - Who regulates groundwater in rural areas?
+      - What role does the gram sabha play in groundwater regulation?
+      - What are the powers of municipal bodies over groundwater?
+
+  - intent: ask_groundwater_monitoring
+    examples: |
+      - What is groundwater monitoring?
+      - Can you explain groundwater regime monitoring?
+      - How do you monitor groundwater levels and quality?
+      - What are the key attributes of groundwater monitoring?
+      - How is groundwater temperature measured?
+      - Tell me about groundwater monitoring network stations.
+      - When did the groundwater monitoring network start?
+      - How often are groundwater samples collected?
+
+  - intent: ask_rainfall_pattern
+    examples: |
+      - What was the rainfall pattern in 2012?
+      - Can you show me the rainfall data for 2012?
+      - How did the actual rainfall compare to the long-period average in 2012?
+      - What was the rainfall in August and September 2012?
+      - Tell me about the rainfall in different regions of India for 2012.
+      - How does the 2012 rainfall compare to the LPA for that year?
+      - What were the monthly rainfall figures for 2012?
+      - How did the rainfall in 2012 affect the different regions?
+
+  - intent: ask_climatic_parameters
+    examples: |
+      - What climatic parameters affect groundwater regimes?
+      - How do rainfall and evapotranspiration impact groundwater?
+      - What are the natural conditions influencing groundwater?
+      - How does climate change affect groundwater levels?
+
+  - intent: ask_groundwater_levels
+    examples: |
+      - What is the groundwater level scenario in India for November 2012?
+      - Can you provide details on groundwater depth across different states in India?
+      - How deep is the groundwater in Sub-Himalayan regions?
+      - What are the groundwater depth ranges in Maharashtra and Gujarat?
+      - How does the groundwater level vary in coastal regions of Andhra Pradesh and Tamil Nadu?
+      - What was the depth of groundwater in Eastern and South-Eastern West Bengal in November 2012?
+      - Tell me about the groundwater levels in North Gujarat and Western Rajasthan.
+      - How do groundwater levels compare across different Indian states?
+
+  - intent: ask_statewise_groundwater_levels
+    examples: |
+      - What is the groundwater level in Gujarat for November 2012?
+      - Can you tell me about the groundwater depth in Maharashtra?
+      - How deep is the groundwater in Tamil Nadu?
+      - What were the water levels in Andhra Pradesh during November 2012?
+
+  - intent: ask_historical_groundwater_levels
+    examples: |
+      - What were the groundwater levels in India in previous years?
+      - Can you provide historical groundwater depth data for Gujarat?
+      - How have groundwater levels changed over the past decade?
+      - What is the trend in groundwater levels in South India over the years?
+
+  - intent: ask_groundwater_level_effects
+    examples: |
+      - What are the effects of shallow groundwater levels on agriculture?
+      - How does deep groundwater affect water availability?
+      - What impact does groundwater depth have on water quality?
+      - How do varying groundwater levels influence water management practices?
+
+  - intent: ask_methods_of_measuring_groundwater_levels
+    examples: |
+      - How is groundwater depth measured?
+      - What techniques are used to monitor groundwater levels?
+      - Can you explain how groundwater level measurements are taken?
+      - What instruments are used for groundwater level monitoring?
+
+  - intent: ask_water_level_by_state_district
+    examples: |
+      - What is the water level in [Guntur](district) for [2020-21](year)?
+      - Tell me the post-monsoon water levels in [Havelock Island](district) for [2020-21](year).
+      - What were the pre-monsoon water levels in [Visakhapatnam](district)?
+      - Water levels in [North Andaman](district) for [2020-21](year)?
+      - How deep is the water in [Havelock Island](district) for [2020-21](year)?
+      - Water levels in [Andhra Pradesh](state) for [2020-21](year)?
+
+  - intent: ask_water_level_by_year
+    examples: |
+      - What were the water levels in [Andhra Pradesh](state) for [2020-21](year)?
+      - Tell me about the water levels for [Andaman and Nicobar Islands](state) in [2020-21](year).
+      - Provide water level details for [North Andaman](district) in [2020-21](year).
+      - What were the water levels across different districts in [2020-21](year)?
+
+  - intent: inform_state
+    examples: |
+      - The state is [Andhra Pradesh](state).
+      - I am looking for data in [Maharashtra](state).
+
+  - intent: inform_district
+    examples: |
+      - The district is [Guntur](district).
+      - I need information about [North Andaman](district).
+
+  - intent: inform_year
+    examples: |
+      - The year is [2020-21](year).
+      - I want details for [2021-22](year).

@@ -1,0 +1,256 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_about_groundwater_security
+  - ask_about_groundwater_crisis
+  - ask_about_farmer_suicides
+  - ask_about_public_trust_doctrine
+  - ask_about_fundamental_right_to_water
+  - ask_about_regulation_of_groundwater
+  - ask_about_groundwater_laws
+  - ask_name
+  - ask_groundwater_monitoring
+  - ask_rainfall_pattern
+  - ask_climatic_parameters
+  - ask_groundwater_levels
+  - ask_statewise_groundwater_levels
+  - ask_historical_groundwater_levels
+  - ask_groundwater_level_effects
+  - ask_methods_of_measuring_groundwater_levels
+  - ask_water_level_by_state_district
+  - ask_water_level_by_year
+  - inform_year
+  - inform_district
+  - inform_state
+
+entities:
+  - groundwater
+  - drought
+  - Supreme Court
+  - farmers
+  - public trust doctrine
+  - right to water
+  - name
+  - state
+  - district
+  - year
+  - range
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, by Abhinav."
+
+  utter_groundwater_security:
+    - text: "Groundwater security refers to the sustainable management and use of groundwater resources to ensure adequate supply for all stakeholders, including rural and urban areas."
+
+  utter_groundwater_crisis:
+    - text: "The groundwater crisis is caused by excessive overdraft and contamination, leading to severe water shortages and impacting livelihoods, particularly in agricultural regions."
+
+  utter_farmer_suicides:
+    - text: "Farmer suicides are often linked to water crises, including droughts and groundwater depletion, which impact crop yields and livelihoods."
+
+  utter_public_trust_doctrine:
+    - text: "The public trust doctrine, as applied by the Supreme Court of India, recognizes groundwater as a common pool resource that should be protected for the public good."
+
+  utter_fundamental_right_to_water:
+    - text: "The Supreme Court of India has recognized the fundamental right to water as part of the right to life under the Constitution, obligating the state to ensure access to water."
+
+  utter_regulation_of_groundwater:
+    - text: "Groundwater is regulated through a combination of central and local governance. The powers of gram sabhas, panchayats, and municipal bodies are key to managing groundwater resources."
+
+  utter_groundwater_laws:
+    - text: |
+        This law aims to protect and ensure the availability of clean groundwater for everyone, both in rural and urban areas.
+
+        Groundwater is crucial for drinking, farming, and industry, but it’s facing a serious crisis due to overuse and pollution.
+
+    - text: |
+        The law emphasizes the need for fair and environmentally-friendly management of groundwater to tackle problems like farmer suicides and climate change.
+
+        Groundwater is a shared resource, not private property, and must be managed with everyone’s best interest in mind.
+
+    - text: |
+        The Supreme Court of India recognizes water as a basic human right, and this law strengthens the role of local governments in managing groundwater.
+
+        To protect drinking water and livelihoods, a new legal framework is necessary to ensure that groundwater is used responsibly and sustainably.
+
+  utter_say_name:
+    - text: Nice to meet you {name} , How could I assist you?
+
+  utter_default:
+    - text: "Sorry, I didn't understand that. Could you please rephrase?"
+
+  utter_groundwater_monitoring_details:
+    - text: >
+        Groundwater monitoring involves measuring levels, quality, and temperature of groundwater through a network of observation wells. Key attributes include:
+        - **Groundwater Level**: Measured four times a year (January, April/May, November).
+        - **Groundwater Quality**: Samples collected annually (April/May) to assess regional quality changes.
+        - **Temperature**: Recorded as part of quality monitoring.
+        The monitoring network started in 1969 with the Central Ground Water Board and includes 15,653 wells across the country.
+
+  utter_rainfall_pattern_details:
+    - text: >
+        For the 2012 Southwest Monsoon season, rainfall was as follows:
+        - **All India**: 819.8 mm (92% of LPA 887.5 mm)
+        - **Northwest India**: 569.3 mm (93% of LPA 615.0 mm)
+        - **Central India**: 935.5 mm (96% of LPA 975.5 mm)
+        - **Northeast India**: 1275.3 mm (89% of LPA 1438.3 mm)
+        - **South Peninsula**: 643.9 mm (90% of LPA 715.5 mm)
+        Monthly details:
+        - **June**: Actual 117.8 mm (72% of LPA 163.6 mm)
+        - **July**: Actual 250.4 mm (87% of LPA 289.2 mm)
+        - **August**: Actual 264.7 mm (101% of LPA 261.3 mm)
+        - **September**: Actual 192.0 mm (111% of LPA 173.4 mm)
+        - **August + September**: Actual 453.7 mm (104% of LPA 434.7 mm)
+
+  utter_climatic_parameters_details:
+    - text: >
+        Climatic parameters affecting groundwater regimes include:
+        - **Rainfall**: Directly influences recharge levels.
+        - **Evapotranspiration**: Affects the water balance and recharge.
+        - **Temperature**: Impacts evaporation rates and groundwater recharge.
+        Anthropogenic factors include aquifer depletion, irrigation, and waste disposal.
+  utter_groundwater_levels_details:
+    - text: >
+        In November 2012, groundwater levels varied across India as follows:
+        - **Sub-Himalayan Areas, North of River Ganges, Eastern Coast of Orissa, Andhra Pradesh, Kerala, Gujarat, Maharashtra, Chhattisgarh, Madhya Pradesh, Bihar, Jharkhand, Northeast, Coastal Tamil Nadu**:
+          Depth generally ranges from 2-5 meters below ground level (bgl). About 37% of wells fall in this range.
+        - **Shallow Water Levels (Less than 2 m bgl)**:
+          Observed in West Maharashtra, Assam, North Bihar, Orissa, Coastal Andhra Pradesh, and Tamil Nadu.
+        - **North-Western States**: Depth typically ranges from 10-20 m bgl.
+        - **Western Parts of the Country**: Deeper water levels of 20-40 m bgl and more than 40 m bgl. North Gujarat, parts of Haryana, and Western Rajasthan show levels greater than 40 m bgl.
+        - **West Coast**: Generally less than 5 m bgl, with isolated pockets in Western Maharashtra having less than 2 m bgl.
+        - **East Coast**: Coastal Andhra Pradesh has shallow levels less than 2 m bgl.
+        - **Eastern States**: General range of 2-5 m bgl. Southeastern West Bengal has levels of 5-10 m bgl and 10-20 m bgl.
+        - **South India**: Typically 5-10 m bgl, with some isolated pockets showing more than 10 m bgl.
+        
+        Overall, the distribution is:
+        - **Less than 2 m bgl**: 19% of wells
+        - **2-5 m bgl**: 36% of wells
+        - **5-10 m bgl**: 27% of wells
+        - **10-20 m bgl**: 14% of wells
+        - **20-40 m bgl**: 3% of wells
+        - **More than 40 m bgl**: Remaining wells
+
+
+  utter_groundwater_level_effects:
+    - text: |
+        Groundwater level fluctuations can have significant effects on the environment, economy, and society.
+
+        **Effects of Declining Groundwater Levels:**
+        - **Water Scarcity:** Decreased availability for drinking, irrigation, and industrial use, leading to reduced agricultural productivity.
+        - **Land Subsidence:** Excessive extraction can cause ground sinking, damaging infrastructure like roads and buildings.
+        - **Deterioration of Water Quality:** Lower levels can lead to contaminant intrusion, such as seawater, and increased pollutant concentration.
+        - **Impact on Ecosystems:** Drying up of wetlands and rivers, leading to loss of biodiversity.
+        - **Increased Energy Costs:** More energy is required to pump water from deeper levels, raising costs.
+        - **Social and Economic Impacts:** Water shortages can lead to conflicts and migration due to affected livelihoods.
+
+        **Effects of Rising Groundwater Levels:**
+        - **Flooding and Waterlogging:** Can cause flooding and damage to infrastructure and agriculture, and hinder crop growth.
+        - **Contamination of Surface Water:** Elevated levels can push contaminants into surface water bodies.
+        - **Structural Damage:** Rising water tables can weaken foundations, leading to structural instability.
+
+        **Managing Groundwater Levels:**
+        - **Sustainable Water Use:** Implement water-saving technologies and reduce extraction to balance levels.
+        - **Groundwater Recharge:** Techniques like artificial recharge and rainwater harvesting can help replenish levels.
+        - **Policy and Regulation:** Stricter regulations on extraction and NOC enforcement can help manage use.
+
+
+  utter_ask_state:
+    - text: "Which state are you interested in?"
+
+  utter_ask_district:
+    - text: "Which district?"
+
+  utter_ask_year:
+    - text: "For which year?"
+
+  utter_water_level_data_fetched:
+    - text: "Here is the water level data you requested."
+
+  utter_methods_of_measuring_groundwater_levels:
+  - text: "Groundwater levels are typically measured using observation wells. The data is collected four times a year by the Central Ground Water Board."
+
+utter_ask_year:
+  - text: "Please provide the year or range of years you are interested in for historical groundwater levels."
+  
+utter_groundwater_levels_details:
+  - text: "Please provide the location (state or district) for which you'd like to know the groundwater levels."
+
+utter_groundwater_level_effects:
+  - text: "Groundwater levels can be affected by various factors, including rainfall, evaporation, and human activities like pumping and irrigation. Would you like to know more details?"
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_database_query
+  - action_generate_response
+  - action_groundwater_monitoring
+  - action_rainfall_pattern
+  - action_climatic_parameters
+  - action_fetch_water_level_data
+
+slots:
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: name
+
+  state:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: state
+      - type: from_text  # Captures user input directly as text
+
+  district:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: district
+      - type: from_text
+
+  year:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: year
+      - type: from_text
+
+forms:
+  water_level_form:
+    required_slots:
+      - state
+      - district
+      - year
